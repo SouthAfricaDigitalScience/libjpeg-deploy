@@ -24,7 +24,7 @@ proc ModulesHelp { } {
 
 module-whatis   "$NAME $VERSION : See https://github.com/SouthAfricaDigitalScience/JPEG-deploy"
 setenv JPEG_VERSION       $VERSION
-setenv JPEG_DIR           $::env(CVMFS_DIR)/$::env(SITE)/$::env(OS)/$::env(ARCH)/$::env(NAME)/$::env(VERSION)
+setenv JPEG_DIR           $::env(CVMFS_DIR)/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
 prepend-path LD_LIBRARY_PATH   $::env(JPEG_DIR)/lib
 prepend-path GCC_INCLUDE_DIR   $::env(JPEG_DIR)/include
 prepend-path CFLAGS            "-I$::env(JPEG_DIR)/include"

@@ -35,7 +35,7 @@ proc ModulesHelp { } {
 
 module-whatis   "$NAME $VERSION."
 setenv       JPEG_VERSION       $VERSION
-setenv       JPEG_DIR           /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$::env(NAME)/$::env(VERSION)
+setenv       JPEG_DIR           /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
 prepend-path LD_LIBRARY_PATH   $::env(JPEG_DIR)/lib
 prepend-path GCC_INCLUDE_DIR   $::env(JPEG_DIR)/include
 prepend-path CFLAGS            "-I$::env(JPEG_DIR)/include"
